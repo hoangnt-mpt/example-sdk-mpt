@@ -1,0 +1,229 @@
+.call-controls-container {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.15);
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 2px solid #e1e5e9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Outbound Call Section */
+.outbound-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-left: 4px solid #007bff;
+}
+
+.outbound-section h4 {
+  color: #007bff;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.outbound-controls .input-group {
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.outbound-controls .form-control {
+  border: 2px solid #e1e5e9;
+  border-right: none;
+  font-size: 16px;
+  padding: 14px 16px;
+  background: white;
+}
+
+.outbound-controls .form-control:focus {
+  border-color: #007bff;
+  box-shadow: none;
+  background: white;
+}
+
+.outbound-controls .btn {
+  border-left: none;
+  padding: 14px 20px;
+  font-weight: 600;
+  background: linear-gradient(45deg, #007bff, #6f42c1);
+  border: 2px solid #007bff;
+  transition: all 0.3s ease;
+}
+
+.outbound-controls .btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+}
+
+.outbound-controls .btn:disabled {
+  background: #6c757d;
+  border-color: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Dialing Info */
+.dialing-info {
+  background: linear-gradient(45deg, #007bff, #6f42c1);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.dialing-info p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.dialing-info strong {
+  font-weight: 700;
+  color: #ffd700;
+}
+
+/* Dialing Controls */
+.dialing-controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Call Status */
+.call-status h3 {
+  color: white;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.call-info {
+  margin-bottom: 20px;
+}
+
+.call-btn {
+  font-weight: 600;
+  border-radius: 15px;
+  padding: 12px 24px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.call-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.call-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.answer-btn {
+  background: linear-gradient(45deg, #28a745, #20c997);
+  animation: pulse-green 2s infinite;
+}
+
+.reject-btn {
+  background: linear-gradient(45deg, #dc3545, #e91e63);
+  animation: pulse-red 2s infinite;
+}
+
+.end-btn {
+  background: linear-gradient(45deg, #dc3545, #fd7e14);
+  margin-top: 10px;
+}
+
+.incoming-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.active-controls .row {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.ended-controls {
+  margin-top: 20px;
+}
+
+/* Animations */
+@keyframes pulse-green {
+  0% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(40, 167, 69, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+  }
+}
+
+@keyframes pulse-red {
+  0% {
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(220, 53, 69, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .incoming-controls {
+    flex-direction: column;
+  }
+  
+  .call-btn {
+    width: 100%;
+    min-width: 200px;
+  }
+  
+  .incoming-controls .call-btn {
+    margin: 5px 0;
+  }
+}
+
+/* Badge styles */
+.badge {
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+
+/* Button state variations */
+.btn-outline-warning {
+  color: #ffc107;
+  border-color: #ffc107;
+  background: rgba(255, 193, 7, 0.1);
+}
+
+.btn-outline-warning:hover {
+  background: #ffc107;
+  color: #000;
+}
+
+.btn-outline-secondary {
+  color: #6c757d;
+  border-color: #6c757d;
+  background: rgba(108, 117, 125, 0.1);
+}
+
+.btn-outline-secondary:hover {
+  background: #6c757d;
+  color: white;
+} 
